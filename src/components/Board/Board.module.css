@@ -1,0 +1,35 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(var(--board-columns), 1fr);
+  grid-template-rows: repeat(var(--board-rows), min-content);
+}
+
+.square {
+  aspect-ratio: 1;
+  background-color: gray;
+  border: 1px solid white;
+  color: white;
+  font-weight: bold;
+  overflow: hidden;
+  position: relative;
+  width: 100px;
+}
+
+.highlight {
+  background-color: #19a3e2;
+  border: 1px solid #19a3e2;
+}
+
+.highlight::after {
+  background-color: #19a3e2;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.7;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.square:nth-of-type(even) {
+  background-color: #1b1b1b;
+}
